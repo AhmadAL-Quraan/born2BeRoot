@@ -9,7 +9,7 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
-
+* [[]]
 # Phrases
 
 * Bootloader: GRUB

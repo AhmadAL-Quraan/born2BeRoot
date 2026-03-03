@@ -17,7 +17,7 @@ System starts
 - vda1 = tiny bootloader space
 - /boot = actual boot files
 
-![[Pasted image 20260302232740.png]]
+![[boot-efi.png]]
 
 
 # What is BIOS and UEFI ?

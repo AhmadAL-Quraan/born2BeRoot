@@ -1,0 +1,205 @@
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
+
+# Phrases
+
+* Bootloader: GRUB
+* Partition table: GPT or MBR
+* Firmaware: UEFI or BIOS
+
+
+## Boot Process Phrases
+
+- Firmware → BIOS / UEFI
+- Bootloader → GRUB
+- Kernel → Linux kernel
+- Initramfs → Early userspace
+- Root filesystem → `/`
+- Runlevel / Target → system state
+- Secure Boot → Firmware security feature
+
+---
+
+## Disk & Partitioning
+
+- Disk → `/dev/sda`, `/dev/vda`    
+- Partition → `/dev/sda1`
+- Filesystem → ext4 / xfs
+- Mount point → `/home`
+- Swap → Virtual memory (DISK)
+- Block device → Disk abstraction
+- UUID → Unique identifier for partitions    
+
+---
+
+## LVM (Very Important for Born2BeRoot)
+
+- PV → Physical Volume    
+- VG → Volume Group
+- LV → Logical Volume
+- PE → Physical Extent
+- LUKS → Linux encryption system
+
+Memory trick:
+Disk → Partition → PV → VG → LV → Filesystem → Mount
+
+---
+
+## Encryption
+
+- LUKS → Disk encryption standard    
+- dm-crypt → Kernel encryption layer
+- Passphrase → Unlock key
+- Mapper device → `/dev/mapper/...`
+---
+
+## Filesystem Structure
+
+- `/boot` → Kernel + GRUB files
+- `/boot/efi` → EFI partition
+- `/home` → User files
+- `/etc` → System configuration
+- `/var` → Logs & variable data
+- `/usr` → Programs
+- `/dev` → Devices
+
+---
+
+## Boot Modes
+
+- Legacy Mode → BIOS    
+- UEFI Mode → Modern firmware
+- CSM → Compatibility Support Module
+- MBR → Old partition table
+- GPT → Modern partition table
+
+---
+
+## System Inspection Commands
+
+- `lsblk` → Show block devices    
+- `blkid` → Show UUIDs
+- `df -h` → Disk usage
+- `mount` → Mounted filesystems
+- `efibootmgr` → UEFI boot entries
+
+---
+
+## Virtualization Terms (Since You Use VMs)
+
+- Hypervisor → Virtual machine manager    
+- Guest OS → Installed OS
+- Host OS → Your real OS
+- Virtual disk → `.vdi`, `.qcow2`
+- BIOS/UEFI setting → VM firmware mode
+
+---
+
+## Advanced (Good for Interviews)
+
+- Boot sector    
+- MBR sector (first 512 bytes)
+- Stage 1 / Stage 2 bootloader
+- Init system → systemd
+- Target → multi-user.target
+- Chroot → Change root environment
+
+---
+
+## Ultimate Boot Chain Phrase
+
+Memorize this:
+```
+Power On  
+ → Firmware (BIOS/UEFI)  
+ → Bootloader (GRUB)  
+ → Kernel  
+ → Initramfs  
+ → systemd  
+ → Userspace
+```
+
+If you understand that chain, you understand Linux booting.
+
+
+---
+
+
+# BIOS
+
+* Basic input/ output system.
+* It the **old firmware** used .
+* Firmware = software stored on the motherboard.
+* Needs BIOS boot partition (2MB).
+* It needs GRUB.
+* Loads bootloader from MBR sector.
+* Process when turn your computer:
+```bash
+1️⃣ BIOS starts
+2️⃣ It checks hardware (RAM, CPU, disk)
+3️⃣ It looks for bootloader on disk (MBR)
+4️⃣ It loads GRUB
+5️⃣ GRUB loads Linux
+```
+
+### BIOS characteristics:
+
+- Very old (1980s technology)
+- Uses **MBR** partition table
+- Limited to disks ≤ 2TB
+- Slower and less flexible
+
+
+---
+
+
+
+# UEFI
+
+* EFI = Extensible firmware interface.
+* Moder version = UEFI
+* Uses **GPT** partition table.
+* Needs EFI partition (~600MB) --> /boot/efi
+* Doesn't need GRUB.
+* Loads .efi file from partition
+* Process when turn your computer:
+```bash
+1️⃣ UEFI starts
+2️⃣ It reads a special partition (EFI System Partition)
+3️⃣ It loads a .efi bootloader file
+4️⃣ That loads Linux
+```
+
+### What Is the EFI Partition?
+
+If you use UEFI, you get:
+`/boot/efi`
+This is:
+- FAT32 filesystem
+- ~100–600 MB
+- Contains `.efi` boot files
+
+## Major difference 
+
+| BIOS                             | UEFI                                  |
+| -------------------------------- | ------------------------------------- |
+| Old                              | Modern                                |
+| Uses MBR                         | Uses GPT                              |
+| Loads bootloader from MBR sector | Loads .efi file from partition        |
+| Needs BIOS boot partition (2MB)  | Needs EFI partition (~600MB)          |
+| Limited features                 | Supports Secure Boot, networking, GUI |
+
+
+# GRUB ?
+
+* GRUB: Grand unified bootloader.
+* It is the program that loads your operating system.

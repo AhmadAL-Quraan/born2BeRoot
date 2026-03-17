@@ -5,12 +5,10 @@
 * Debian is easier and more flexible, but Rocky provides a more realistic server environment and stricter behavior, which is better for learning advanced Linux concepts.
 
 ## Comparing Debian vs Rocky
-* | Feature           | Debian        | Rocky                |
-| ----------------- | ------------- | ---------------------- |
-| Stability         |  very stable  |  enterprise stable     |
-| Ease of use       | easier        | slightly stricter      |
-| Security defaults | moderate      | stricter               |
-| Industry usage    | common        | very common in servers |
-| Learning sysadmin | good          | excellent              |
-
-
+| Feature            | Debian          | Rocky Linux            |
+|--------------------|-----------------|------------------------|
+| Stability          | Very stable     | Enterprise-grade stable |
+| Ease of use        | Easier          | Slightly stricter      |
+| Security defaults  | Moderate        | Stricter               |
+| Industry usage     | Common          | Widely used in servers |
+| Learning sysadmin  | Good            | Excellent              |

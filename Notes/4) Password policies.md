@@ -248,7 +248,7 @@ Defaults requiertty
 `sudo sudo -V | grep tty`
 
 
-
+![[requiretty-with-sudo.png]]
 
 ### Restrict the paths used by sudo
 

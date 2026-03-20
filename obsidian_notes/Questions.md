@@ -1,4 +1,14 @@
-
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
 
 ## Tasks
 
@@ -71,3 +81,4 @@ bash.
 * How to make the script run on specific time ?
 * How to make a message appears on all terminals sessions ?
 * How to see what current sessions are opened on the system and users ?
+	`w` or `who`

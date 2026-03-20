@@ -1,5 +1,19 @@
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
 
 
+* This file is not complete and it doesn't describe each command or steps in the script, it just has some important notes or command I used during writing it.
+
+ 
 ## How many commands executed with `sudo` on the system 
 
 * The number of commands executed with the sudo program:
@@ -26,7 +40,7 @@ Many simple commands like `ls`, `cat`, etc., do not log anything by default, so 
     (like `google.com` → `142.250.x.x`)
 
 
-## 🧠 Why we use it in commands
+###  Why we use it in commands
 
 When you run:
 `ip route get 1.1.1.1`
@@ -34,7 +48,7 @@ When you run:
 > “If I try to reach the internet, which interface and IP will my system use?”
 
 
-## 💡 Why `1.1.1.1` specifically?
+### Why `1.1.1.1` specifically?
 
 -  Always online
 -  Very fast and reliable
@@ -57,3 +71,37 @@ exec 2>/dev/null
 -> `exec > file` → redirects output globally
 -> `exec 2>/dev/null` → hides all errors globally
 - No new process is created
+
+
+
+
+## See the current users who using the system right now and their terminal 
+
+
+* Use the command `who` 
+
+### Different between `w` and `who`
+#### `who`
+
+- Reads from **`/var/run/utmp`**
+- Shows only **real login sessions**
+    - TTY logins
+    - SSH sessions
+    - display manager sessions
+
+👉 So it only lists users that **officially logged into the system**
+![[Pasted image 20260320235757.png]]
+
+####  `w`
+- Uses **process information (`/proc`)**
+- Shows **any active session with a controlling terminal or user context**
+
+👉 This includes:
+- Real users (like you)
+- **System/service users** (like `exam` in your case) --> Services that acts as users.
+
+![[Pasted image 20260320235743.png]]
+
+>[!note] So `w` and `who` could show different users, because both of them read from different files on the system, `w` shows also any service that acts as a user, unlike `who` which shows real users only. `w` Reads from the `/proc`.
+
+

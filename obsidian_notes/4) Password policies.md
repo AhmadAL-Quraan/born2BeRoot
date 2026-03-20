@@ -10,7 +10,6 @@ hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
 
-
 | Requirement             | File                           |
 | ----------------------- | ------------------------------ |
 | Password expiration     | `/etc/login.defs`              |

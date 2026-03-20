@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "obsidian_notes/Questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Questions"
             }
           }
         ]
@@ -185,16 +185,25 @@
   },
   "active": "b8cb20be96b63f94",
   "lastOpenFiles": [
-    "scripts/monitoring.sh",
+    "obsidian_notes/4) Password policies.md",
+    "obsidian_notes/5) Script_notes.md",
+    "obsidian_notes/3) Change port for SSH.md",
+    "obsidian_notes/2) Configuring and securing SSH.md",
+    "obsidian_notes/1) Linux booting.md",
+    "obsidian_notes/Questions.md",
+    "notes/5) Script_notes.pdf",
+    "notes/4) Password policies.pdf",
+    "notes/3) Change port for SSH.pdf",
+    "notes/2) Configuring and securing SSH.pdf",
+    "notes/1) Linux booting.pdf",
+    "notes",
+    "images/Pasted image 20260320235757.png",
+    "images/Pasted image 20260320235743.png",
     "scripts/Untitled.md",
+    "scripts/monitoring.sh",
     "scripts",
     "README.md",
-    "Notes/5) Script.md",
-    "Notes/4) Password policies.md",
     "images/requiretty-with-sudo.png",
-    "Notes/-p",
-    "Notes/3) Change port for SSH.md",
-    "Notes/2) Configuring and securing SSH.md",
-    "Notes/1) Linux booting.md"
+    "Notes/-p"
   ]
 }

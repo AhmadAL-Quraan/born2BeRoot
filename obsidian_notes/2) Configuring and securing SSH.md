@@ -14,8 +14,6 @@ debugInConsole: false # Print debug info in Obsidian console
 
 
 
-
-
 ---
 
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/4) Password policies.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4) Password policies"
+              "title": "README"
             }
           }
         ]
@@ -185,10 +185,14 @@
   },
   "active": "b8cb20be96b63f94",
   "lastOpenFiles": [
-    "images/requiretty-with-sudo.png",
-    "Notes/-p",
+    "scripts/monitoring.sh",
+    "scripts/Untitled.md",
+    "scripts",
+    "README.md",
     "Notes/5) Script.md",
     "Notes/4) Password policies.md",
+    "images/requiretty-with-sudo.png",
+    "Notes/-p",
     "Notes/3) Change port for SSH.md",
     "Notes/2) Configuring and securing SSH.md",
     "Notes/1) Linux booting.md"

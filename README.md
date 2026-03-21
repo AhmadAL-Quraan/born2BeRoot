@@ -14,9 +14,8 @@
 
 
 
-# Notes 
 
-* I have made notes about each concept related to the task as pdf's (easier to manipulate images) in Notes.
+* I have made notes about each concept related to the task as pdf's (easier to manipulate images) in Notes directory.
 
 # Topics I improved in
 
